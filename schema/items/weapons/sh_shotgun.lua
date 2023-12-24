@@ -1,0 +1,10 @@
+ITEM.name = "SPAS 12"
+ITEM.uniqueID = "shotgun"
+ITEM.description = "Black painted heavy looking weapon, with dull white parts."
+ITEM.class = "arccw_bms_spas12"
+ITEM.weaponCategory = "primary"
+ITEM.model = "models/weapons/arccw/w_spas12_bms.mdl"
+ITEM.width = 3
+ITEM.height = 1
+ITEM.price = 50
+ITEM.noBusiness = true

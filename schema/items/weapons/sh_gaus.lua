@@ -1,0 +1,9 @@
+ITEM.name = "Tau Cannon"
+ITEM.description = "A powerful particle accelerator with significant stopping power."
+ITEM.class = "weapon_bms_tau"
+ITEM.weaponCategory = "primary"
+ITEM.model = "models/bms/weapons/w_gauss.mdl"
+ITEM.width = 1
+ITEM.height = 2
+ITEM.price = 100
+ITEM.noBusiness = true

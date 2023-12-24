@@ -1,0 +1,9 @@
+ITEM.name = "Gluon Gun"
+ITEM.description = "An experimental weapon that fires a devastating laser capable of disintegrating organic matter."
+ITEM.class = "weapon_bms_gluon"
+ITEM.weaponCategory = "primary"
+ITEM.model = "models/bms/weapons/w_egon.mdl"
+ITEM.width = 1
+ITEM.height = 2
+ITEM.price = 100
+ITEM.noBusiness = true

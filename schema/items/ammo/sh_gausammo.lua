@@ -1,0 +1,9 @@
+ITEM.name = "Gaus Ammo"
+ITEM.model = "models/bms/weapons/w_gaussammo.mdl"
+ITEM.ammo = "smg1"
+ITEM.ammoAmmount = "GaussEnergy"
+ITEM.description = "A Box that contains %s of Gaus Ammo"
+ITEM.category = "Ammunition"
+ITEM.flag = "y"
+ITEM.width = 1
+ITEM.height = 1

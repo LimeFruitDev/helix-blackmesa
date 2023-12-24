@@ -1,0 +1,7 @@
+"ixblackmesa"
+{
+	"base" 		"helix"
+	"title" 		"Black Mesa"
+	"author" 		"LimeFruit"
+	"menusystem"	"1"
+}

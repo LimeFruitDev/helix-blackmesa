@@ -1,0 +1,315 @@
+
+local whitelist = {
+}
+
+Schema:RegisterScriptEvent("Horizons", {
+	description = "Special event category.",
+	customNotify = true,
+	OnRun = function(client, args)
+		if (!args[2]) then
+			client:Notify("Missing argument.")
+			return
+		end
+
+		if (whitelist[client:SteamID()]) then
+			client:Notify("You are not whitelisted for this command.")
+			return
+		end
+
+		if (args[2]:lower() == "galaxy") then
+			ix.chat.Send(client, "event", "A sudden white flash is emitted. The sublevel lights up as those inside of the chamber and the control room find themselves staring at the stars.")
+
+			ix.event.ScreenFade(SCREENFADE.IN, Color(255, 255, 255, 255), 1, 2)
+			ix.event.PlayGlobalSound("ambient/energy/whiteflash.wav")
+
+			ix.event.SetMapLightStyle("m", true, true)
+
+			ix.event.SpawnParticleSystem("d_galaxy", Vector(-4089.013428, 604.129944, 5997.377930))
+			ix.event.SpawnParticleSystem("d_galaxy_a", Vector(-4089.013428, 604.129944, 5997.377930))
+
+			timer.Simple(10, function()
+				ix.chat.Send(client, "event", "A wave of green covers your vision, as the very fabrics of reality begin to tear around the device.")
+
+				ix.event.ScreenFade(SCREENFADE.IN, Color(0, 255, 0, 255), 1, 1)
+				ix.event.PlayGlobalSound("ambient/levels/citadel/portal_beam_shoot1.wav")
+				ix.event.ColorModify()
+
+				timer.Simple(5, function()
+					ix.chat.Send(client, "event", "Beams of green and blue send out awful vibrations through your body, as rifts begin to appear across the chamber, and perhaps further.")
+
+					ix.event.SpawnParticleSystem("xen_portal_large", Vector(-4089.514404, 607.051025, 5877.077148))
+					ix.event.PlayGlobalSound("bms_objects/portal/portal_in_01.wav")
+					util.ScreenShake(Vector(0, 0, 0), 5, 5, 5, 9999999)
+
+					-- chamber
+					timer.Simple(0.5, function()
+						ix.event.SpawnParticleSystem("xen_portal_large", Vector(-4407.689941, 452.462799, 5854.027832))
+						ix.event.PlayGlobalSound("bms_objects/portal/portal_in_02.wav")
+						util.ScreenShake(Vector(0, 0, 0), 5, 5, 5, 9999999)
+					end)
+
+					-- control room
+					timer.Simple(0.75, function()
+						ix.event.SpawnParticleSystem("xen_portal_large", Vector(-4085.816162, 1155.827759, 5988.634766))
+						ix.event.PlayGlobalSound("bms_objects/portal/portal_in_03.wav")
+						util.ScreenShake(Vector(0, 0, 0), 5, 5, 5, 9999999)
+					end)
+
+					-- coils
+					timer.Simple(1.25, function()
+						ix.event.SpawnParticleSystem("xen_portal_large", Vector(-4272.561035, 1951.300415, 5952.862305))
+						ix.event.PlayGlobalSound("bms_objects/portal/portal_in_01.wav")
+						util.ScreenShake(Vector(0, 0, 0), 5, 5, 5, 9999999)
+					end)
+
+					-- pressure lines
+					timer.Simple(2.4, function()
+						ix.event.SpawnParticleSystem("xen_portal_large", Vector(-3554.885010, 1352.777466, 5753.629395))
+						ix.event.PlayGlobalSound("bms_objects/portal/portal_in_02.wav")
+						util.ScreenShake(Vector(0, 0, 0), 5, 5, 5, 9999999)
+					end)
+
+					-- ams control room
+					timer.Simple(2.6, function()
+						ix.event.SpawnParticleSystem("xen_portal_large", Vector(-4085.816162, 1155.827759, 5988.634766))
+						ix.event.PlayGlobalSound("bms_objects/portal/portal_in_03.wav")
+						util.ScreenShake(Vector(0, 0, 0), 5, 5, 5, 9999999)
+					end)
+
+					-- ams chamber security checkpoint
+					timer.Simple(3, function()
+						ix.event.SpawnParticleSystem("xen_portal_large", Vector(-4948.173340, 1267.577881, 5819.596191))
+						ix.event.PlayGlobalSound("bms_objects/portal/portal_in_01.wav")
+						util.ScreenShake(Vector(0, 0, 0), 5, 5, 5, 9999999)
+					end)
+
+					-- ams control room hallway
+					timer.Simple(3.6, function()
+						ix.event.SpawnParticleSystem("xen_portal_large", Vector(-3644.976074, 1643.312744, 6002.615723))
+						ix.event.PlayGlobalSound("bms_objects/portal/portal_in_02.wav")
+						util.ScreenShake(Vector(0, 0, 0), 5, 5, 5, 9999999)
+					end)
+
+					-- ionization chambers
+					timer.Simple(4, function()
+						ix.event.SpawnParticleSystem("xen_portal_large", Vector(-3253.468750, 2494.181641, 6185.585449))
+						ix.event.PlayGlobalSound("bms_objects/portal/portal_in_03.wav")
+						util.ScreenShake(Vector(0, 0, 0), 5, 5, 5, 9999999)
+					end)
+
+					-- coils catwalk
+					timer.Simple(4, function()
+						ix.event.SpawnParticleSystem("xen_portal_large", Vector(-4691.589355, 1593.528564, 6148.353516))
+						ix.event.PlayGlobalSound("bms_objects/portal/portal_in_03.wav")
+						util.ScreenShake(Vector(0, 0, 0), 5, 5, 5, 9999999)
+					end)
+
+					-- ams entry door
+					timer.Simple(4.5, function()
+						ix.event.SpawnParticleSystem("xen_portal_large", Vector(-2500.857910, 2578.850342, 6185.507813))
+						ix.event.PlayGlobalSound("bms_objects/portal/portal_in_01.wav")
+						util.ScreenShake(Vector(0, 0, 0), 5, 5, 5, 9999999)
+					end)
+
+					-- ams elevator entrance
+					timer.Simple(4.5, function()
+						ix.event.SpawnParticleSystem("xen_portal_large", Vector(-1909.491577, 1105.079956, 6153.522461))
+						ix.event.PlayGlobalSound("bms_objects/portal/portal_in_02.wav")
+						util.ScreenShake(Vector(0, 0, 0), 5, 5, 5, 9999999)
+					end)
+
+					-- ams laboratory
+					timer.Simple(6, function()
+						ix.event.SpawnParticleSystem("xen_portal_large", Vector(-4444.473633, 2367.370605, 6181.061035))
+						ix.event.PlayGlobalSound("bms_objects/portal/portal_in_03.wav")
+						util.ScreenShake(Vector(0, 0, 0), 5, 5, 5, 9999999)
+					end)
+				end)
+
+				-- remove the galaxy
+				timer.Simple(11.5, function()
+					ix.chat.Send(client, "event", "The green light fades away with a quick flash. The stars disappear from the control room. All that is left is an extremely damaged sublevel... and odd creature sounds.")
+
+					ix.event.RemoveParticleSystem("d_galaxy")
+					ix.event.RemoveParticleSystem("d_galaxy_a")
+
+					ix.event.ScreenFade(SCREENFADE.IN, Color(255, 255, 255, 255), 1, 2)
+					ix.event.PlayGlobalSound("ambient/levels/citadel/portal_open1_adpcm.wav")
+					ix.event.PlayGlobalSound("ambient/energy/whiteflash.wav")
+
+					ix.event.ColorModifyRemove()
+				end)
+			end)
+		elseif (args[2]:lower() == "insertion") then
+			ix.event.SpawnParticleSystem("lc_teleport_explosion", Vector(-4089.062744, 602.932251, 5584.287109))
+
+			if (IsValid(ents.FindByName("amscheck_counter")[1])) then
+				ents.FindByName("amscheck_counter")[1]:Fire("Kill", "", 0)
+			end
+
+			ents.FindByName("controlroom_button_emergency_stop")[1]:Fire("Lock")
+			ents.FindByName("controlroom_button_stop")[1]:Fire("Lock")
+
+			ix.event.PlayGlobalSound("ambient/levels/citadel/portal_beam_shoot4.wav")
+			util.ScreenShake(Vector(0, 0, 0), 5, 5, 5, 9999999)
+
+			ix.chat.Send(client, "event", "As the unsuspecting survey team pushes the sample into the device, the ground begins to shake. Blue light is shot outwards from the center of the device, a wave of heat covering the chamber.")
+		elseif (args[2]:lower() == "explosion") then
+			local chamber_fade = ents.FindByName("chamber_fade")[1]
+			local portal_stop_sound = ents.FindByName("portal_stop_sound")[1]
+			local emergency_shutdown_alarm = ents.FindByName("emergency_shutdown_alarm")[1]
+			local beam_tube1_stop = ents.FindByName("beam_tube1_stop")[1]
+			local beam_tube2_stop = ents.FindByName("beam_tube2_stop")[1]
+			local beam_tube3_stop = ents.FindByName("beam_tube3_stop")[1]
+			local beam_tube_alarm = ents.FindByName("beam_tube_alarm")[1]
+			local overhead_panel = ents.FindByName("ion_screen4_button")[1]
+			local overhead_panel2 = ents.FindByName("beam_tube2_status")[1]
+
+			ix.chat.Send(client, "event", "Waves of visible, blue light begin emitting from the center of the device up top. The control room lights up with alarms as the device can no longer be controlled.")
+
+			ix.event.SpawnParticleSystem("portal_rift_01", Vector(-4099.892578, 637.294250, 7609.818848))
+			ix.event.PlayGlobalSound("ambient/levels/citadel/portal_beam_shoot6.wav")
+			util.ScreenShake(Vector(0, 0, 0), 5, 5, 5, 9999999)
+
+			-- chamber warnings
+			timer.Simple(2.5, function()
+				emergency_shutdown_alarm:Fire("Volume", "10", 0)
+				emergency_shutdown_alarm:Fire("PlaySound", "", 0)
+				overhead_panel:EmitSound("bms_objects/alarms/alarm4.wav")
+				overhead_panel2:EmitSound("bms_objects/alarms/alarm4.wav")
+				ents.FindByName("rotate_alarm")[1]:Fire("FireUser1", "", 0)
+				util.ScreenShake(Vector(0, 0, 0), 5, 5, 5, 9999999)
+			end)
+
+			timer.Simple(5, function()
+				portal_stop_sound:EmitSound("ambient/levels/citadel/portal_beam_loop1.wav")
+				ix.event.PlayGlobalSound("ambient/levels/citadel/portal_beam_shoot4.wav")
+				util.ScreenShake(Vector(0, 0, 0), 5, 5, 5, 9999999)
+
+				-- coils shutdown
+				beam_tube1_stop:Fire("Lock", "", 0)
+				beam_tube2_stop:Fire("Lock", "", 0)
+				beam_tube3_stop:Fire("Lock", "", 0)
+				beam_tube_alarm:EmitSound("bshift/scripted_incident/incident_elev_stop", 75, 100)
+			end)
+
+			-- coil malfunctions/alarms
+			timer.Simple(15, function()
+				ix.chat.Send(client, "event", "Fires, sparks and explosions begin emitting out of the peripheral devices as another wave of heat passes through-out the sector.")
+
+				ix.event.PlayGlobalSound("ambient/levels/citadel/portal_beam_shoot5.wav")
+				ix.event.PlayGlobalSound("ambient/explosions/exp2.wav")
+
+				util.ScreenShake(Vector(0, 0, 0), 5, 5, 5, 9999999)
+
+				beam_tube_alarm:Fire("PlaySound", "", 0)
+				beam_tube_alarm:Fire("PlaySound", "", 1)
+				beam_tube_alarm:Fire("PlaySound", "", 2)
+
+				timer.Simple(5, function()
+					beam_tube1_stop:EmitSound("weapons/cguard/charging.wav", 75, 100)
+					beam_tube2_stop:EmitSound("weapons/cguard/charging.wav", 75, 100)
+					beam_tube3_stop:EmitSound("weapons/cguard/charging.wav", 75, 100)
+				end)
+			end)
+
+			-- explosion
+			timer.Simple(17.5, function()
+				ix.chat.Send(client, "event", "The energy concentrates inwards to the center of the device before violently expanding outwards.")
+				ix.event.PlayGlobalSound("ambient/levels/labs/teleport_preblast_suckin1.wav", "", 0)
+			end)
+
+			timer.Simple(20, function()
+				ents.FindByName("portal_emergency_shutdown")[1]:Fire("Trigger", "", 0)
+				ix.event.PlayGlobalSound("bshift/scripted_incident/incident_controlroom_explode03.wav")
+				util.ScreenShake(Vector(0, 0, 0), 9999, 9999, 15, 9999999)
+
+				timer.Simple(10, function()
+					ix.event.PlayGlobalSound("bshift/scripted_incident/incident_controlroom_explode02.wav")
+				end)
+				
+				-- control room crazyness
+				for _, window in pairs(ents.FindByName("break_glass")) do
+					window:Fire("Break", "", 0)
+				end
+
+				for i=1, 30 do
+					local shard = ents.Create("prop_physics")
+					shard:SetPos(emergency_shutdown_alarm:GetPos())
+					shard:SetModel("models/gibs/glass_shard0" .. math.random(1, 6) .. ".mdl")
+					shard:Spawn()
+				end
+
+				ents.FindByName("control_panel")[1]:SetSkin(1)
+
+				timer.Simple(15, function()
+					for _, sprite in pairs(ents.FindByName("controlroom_sprite*")) do
+						sprite:Fire("ShowSprite", "", 0)
+					end
+				end)
+
+				-- fade effects
+				if (IsValid(chamber_fade)) then
+					chamber_fade:Fire("Kill", "", 0)
+				end
+
+				timer.Simple(0.5, function()
+					for k, v in pairs(player.GetAll()) do
+						v:SetDSP(7, false)
+						v:EmitSound("player/heartbeat1.wav", 75, 100)
+						v:EmitSound("player/breathe1.wav", 75, 100)
+						v:ScreenFade(SCREENFADE.IN, Color(255, 255, 255, 255), 10, 15)
+
+						timer.Simple(15, function()
+							v:StopSound("player/heartbeat1.wav")
+
+							timer.Simple(11, function()
+								v:StopSound("player/breathe1.wav")
+
+								timer.Simple(2.5, function()
+									v:SetDSP(1, false)
+								end)
+							end)
+						end)
+					end
+
+					timer.Simple(0.5, function()
+						ix.event.SetMapLightStyle("c", true, true)
+					end)
+				end)
+
+				-- ams power box explode
+				ents.FindByName("ams_power_explode")[1]:Fire("Trigger", "", 0)
+
+				-- explode coils
+				beam_tube_alarm:EmitSound("weapons/cguard/charging.wav", 75, 100)
+
+				if (IsValid(ents.FindByName("beam_tube1_explosion")[1])) then
+					ents.FindByName("beam_tube1_explosion")[1]:Fire("Kill", "", 0)
+					ents.FindByName("beam_tube2_explosion")[1]:Fire("Kill", "", 0)
+					ents.FindByName("beam_tube3_explosion")[1]:Fire("Kill", "", 0)
+				end
+
+				ents.FindByName("beam_tube1_counter")[1]:Fire("SetValue", "3", 0)
+				ents.FindByName("beam_tube2_counter")[1]:Fire("SetValue", "3", 0)
+				ents.FindByName("beam_tube3_counter")[1]:Fire("SetValue", "3", 0)
+
+				-- remove portal rift
+				portal_stop_sound:StopSound("ambient/levels/citadel/portal_beam_loop1.wav")
+
+				timer.Simple(2.5, function()
+					ix.event.RemoveParticleSystem("portal_rift_01")
+					portal_stop_sound:Remove()
+				end)
+
+				-- stop overhead alarms
+				timer.Simple(30, function()
+					overhead_panel:StopSound("bms_objects/alarms/alarm4.wav")
+					overhead_panel2:StopSound("bms_objects/alarms/alarm4.wav")
+				end)
+			end)
+		end
+
+		client:Notify("Triggered event Horizons.")
+	end
+})

@@ -1,0 +1,10 @@
+ITEM.name = "Crowbar"
+ITEM.uniqueID = "crowbar"
+ITEM.description = "Attempt to jimmy a door."
+ITEM.class = "bmrp_crowbar"
+ITEM.weaponCategory = "melee"
+ITEM.model = "models/weapons/w_crowbar.mdl"
+ITEM.width = 2
+ITEM.height = 1
+ITEM.price = 15
+ITEM.noBusiness = true

@@ -1,0 +1,9 @@
+ITEM.name = "Sub Machine Gun Ammo"
+ITEM.model = "models/items/boxmrounds.mdl"
+ITEM.ammo = "smg1"
+ITEM.ammoAmmount = "45"
+ITEM.description = "A Box that contains %s of SMG Ammo"
+ITEM.category = "Ammunition"
+ITEM.flag = "y"
+ITEM.width = 1
+ITEM.height = 1

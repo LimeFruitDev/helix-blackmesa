@@ -1,0 +1,10 @@
+ITEM.name = "Candy Cane"
+ITEM.uniqueID = "xmas_baton"
+ITEM.description = "A stick of hard candy with a curve at one end, peppermint-flavored with red and white stripes, great for hitting things and/or people. It leaves you with a sticky hand, until the next time you wash..."
+ITEM.class = "bmrp_xmas_baton"
+ITEM.weaponCategory = "melee"
+ITEM.model = "models/weapons/eminem/candy_cane/w_candy_cane_dropped.mdl"
+ITEM.width = 1
+ITEM.height = 2
+ITEM.price = 10
+ITEM.noBusiness = true

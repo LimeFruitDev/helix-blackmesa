@@ -1,0 +1,10 @@
+ITEM.name = "Colt Python"
+ITEM.uniqueID = "colt"
+ITEM.description = "A double action handgun chambered for the .357 Magnum cartridge, built on Colt's large I-frame. With a reputation for accuracy, smooth trigger pull, and a tight cylinder lock-up."
+ITEM.model = "models/weapons/arccw/w_bms_python.mdl"
+ITEM.class = "arccw_bms_python"
+ITEM.weaponCategory = "sidearm"
+ITEM.width = 2
+ITEM.height = 1
+ITEM.price = 25
+ITEM.noBusiness = true

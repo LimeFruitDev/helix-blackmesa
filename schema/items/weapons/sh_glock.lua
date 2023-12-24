@@ -1,0 +1,11 @@
+ITEM.name = "Glock 17"
+ITEM.uniqueID = "glock"
+ITEM.ammo = "Pistol"
+ITEM.description = "A short recoil–operated, locked-breech semi-automatic pistol that uses a modified Browning cam-lock system adapted from the Hi-Power pistol."
+ITEM.model = "models/weapons/arccw/w_bms_glock17.mdl"
+ITEM.class = "arccw_bms_glock"
+ITEM.weaponCategory = "sidearm"
+ITEM.width = 2
+ITEM.height = 1
+ITEM.price = 25
+ITEM.noBusiness = true

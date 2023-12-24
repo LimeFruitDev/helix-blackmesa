@@ -1,0 +1,9 @@
+ITEM.name = "Buckshot"
+ITEM.model = "models/items/boxbuckshot.mdl"
+ITEM.ammo = "buckshot"
+ITEM.ammoAmmount = "30"
+ITEM.description = "A Box that contains %s of Ammo"
+ITEM.category = "Ammunition"
+ITEM.flag = "y"
+ITEM.width = 1
+ITEM.height = 1

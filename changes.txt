@@ -1,0 +1,79 @@
+This codebase is a bit different than the one we used in the last iteration of BMRP.
+We had to strip some code that the original developers of are no longer affiliated with LimeFruit and we couldn't reach them for permission.
+Additionally, some code is specific to our backend services or contains sensitive data and as such has been removed or modified.
+This contains a list of changes.
+
+- [Schema] Removed cl_fonts
+	Empty file
+- [Schema] Removed animation code
+	Private code
+- [Schema] Removed fireworks
+	Private code
+- [Plugins] Removed archived plugins
+	Plugins removed were:
+		- bettersit (private code)
+		- diseases (private code)
+		- donators (backend specific)
+		- heads (private code)
+		- holidays (private code)
+		- npcspawner (private code)
+		- soundscapes (private code)
+- [Plugins] Removed whitelist
+	This plugin was never used/cleanup
+- [Schema] Removed test lib
+	This library was never used/cleanup
+- [Plugins] Removed devtools
+	Private code
+- [Plugins] Removed stormfox support
+	Private code
+- [Tutorials] Removed plugin, made backwards compatible
+	The entire code of this was stripped but the functions
+	were left to remain backwards-compatible.
+	Private code
+- [Plugins] Removed serverlock
+	Private code
+- [Quiz] Removed plugin, made backwards compatible
+	The entire code of this was stripped but the functions
+	were left to remain backwards-compatible.
+	Private code
+- [Plugins] Removed admintools
+	Private code
+- [Plugins/fixcooldown] Removed private data
+	Private information was stripped from this component
+- [Schema] admintools backwards-compatiblity
+	Made the IsStaff function return IsAdmin for backwards
+	compatiblilty.
+- [Content] Remove fireworks, music, fonts
+	Private content
+- [Plugins] Remove flashbacks
+	This plugin was never used and is private
+- [Plugins] Remove finale
+	Private code
+- [Repo] Remove README
+	Private information
+- [Events/resonancecascade] Removed private data
+	Private information was stripped from this component
+- [Events/horizons] Removed private data
+	Private information was stripped from this component
+- [Plugins] Remove factiontips
+	Private code
+- [Plugins] Remove playercars
+	Private code
+- [Books] Removed all books except for "bmp"
+	Private content
+- [Plugins] Remove logs
+	Private code
+- [Plugins] Remove properties
+	Private code
+- [Plugins] Remove tasers
+	Private code
+- [Plugins] Remove chat extensions
+	Private code
+- [Plugins] Remove prop protection
+	Private code
+- [Plugins] Remove pills
+	Private code
+- [Plugins] Remove overhead chat
+	Private code
+- [Plugins] Remove chat extensions
+	Private code

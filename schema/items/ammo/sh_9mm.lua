@@ -1,0 +1,9 @@
+ITEM.name = "9MM Ammo"
+ITEM.model = "models/Items/BoxSRounds.mdl"
+ITEM.ammo = "Pistol"
+ITEM.ammoAmmount = "45"
+ITEM.description = "A Box that contains %s of Ammo"
+ITEM.category = "Ammunition"
+ITEM.flag = "y"
+ITEM.width = 1
+ITEM.height = 1
